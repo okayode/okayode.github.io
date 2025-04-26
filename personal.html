@@ -1,139 +1,181 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kayode Olumoyin Personal</title>
   <style>
-  * {
-  box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: gainsboro;
+    }
 
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+    .wholepage {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Navigation styling */
+    .info2 {
+      text-align: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .info2 a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .info2 a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .column {
+      flex: 1 1 30%;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .column img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .column h4 {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Responsive section */
+    @media (max-width: 768px) {
+      .column {
+        flex: 1 1 45%;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .column {
+        flex: 1 1 100%;
+      }
+
+      .info2 a {
+        display: block;
+        margin: 5px 0;
+      }
+    }
   </style>
-  </head>
-  <body>
+</head>
 
-<div class=wholepage>
+<body>
 
-<div class="info2">
-<a href="index.html">Home</a>
-<span class="spaced">&bull;</span>
+<div class="wholepage">
 
-<a href="research.html">Research</a>
-<span class="spaced">&bull;</span>
+  <nav class="info2">
+    <a href="index.html">Home</a>
+    <span class="spaced">&bull;</span>
+    <a href="research.html">Research</a>
+    <span class="spaced">&bull;</span>
+    <a href="teaching.html">Teaching</a>
+    <span class="spaced">&bull;</span>
+    <a href="notes.html">Notes</a>
+    <span class="spaced">&bull;</span>
+    <a href="useful_links.html">Useful Links</a>
+    <span class="spaced">&bull;</span>
+    <a href="personal.html">Personal</a>
+    <span class="spaced">&bull;</span>
+  </nav>
 
-<a href="teaching.html">Teaching</a>
-<span class="spaced">&bull;</span>
+  <h1>Kayode Olumoyin</h1>
 
-<a href="notes.html">Notes</a>
-<span class="spaced">&bull;</span>
+  <div class="row">
+    <div class="column">
+      <img src="okayode9.JPG" alt="Snow">
+    </div>
+    <div class="column">
+      <h4>Meeting Dr. Bonita Lawrence, 2011</h4>
+      <img src="okayode10.JPG" alt="Forest">
+    </div>
+    <div class="column">
+      <h4>Bridge Day, West Virginia, 2012</h4>
+      <img src="okayode3.jpg" alt="Mountains">
+    </div>
+  </div>
 
-<a href="useful_links.html">useful links</a>
-<span class="spaced">&bull;</span>
+  <div class="row">
+    <div class="column">
+      <h4>Playing Trivia, Huntington WV, 2013</h4>
+      <img src="okayode6.jpg" alt="Snow">
+    </div>
+    <div class="column">
+      <h4>Bukola at Universal Studios, 2016</h4>
+      <img src="okayode4.jpg" alt="Forest">
+    </div>
+    <div class="column">
+      <h4>Solis House (Desperate Housewives) Universal Studios, 2017</h4>
+      <img src="Carlos_Gabrielle_Solis.jpg" alt="Mountains">
+    </div>
+  </div>
 
-<a href="personal.html">Personal</a>
-<span class="spaced">&bull;</span>
+  <div class="row">
+    <div class="column">
+      <h4>Dr. Abdul Khaliq (middle), Dr. R. Garrappa (3rd Right), 2018</h4>
+      <img src="okayode2.jpg" alt="Snow">
+    </div>
+    <div class="column">
+      <h4>Hooded by Dr. Abdul Khaliq, 2022</h4>
+      <img src="graduation_01.jpg" alt="Forest">
+    </div>
+    <div class="column">
+      <h4>With President Sidney McPhee, 2022</h4>
+      <img src="graduation_02.jpg" alt="Mountains">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <h4>Rejniak Lab, Winter 2022</h4>
+      <img src="2022_Rejniak_labmeeting.jpg" alt="Snow">
+    </div>
+    <div class="column">
+      <h4>Moffitt Symposium, 2023</h4>
+      <img src="2023_MoffittSymposium_Kayode2.jpg" alt="Forest">
+    </div>
+    <div class="column">
+      <h4>Participating in Miles for Moffitt, 2023</h4>
+      <img src="olumoyin_milesMoffitt2.jpeg" alt="Mountains">
+    </div>
+  </div>
 
 </div>
 
-<h1>Kayode Olumoyin</h1>
-
-<div class="row">
-  <div class="column">
-    <img src="okayode9.JPG" alt="Snow" style="width:90%">
-  </div>
-  <div class="column">
-    <h4>Meeting Dr. Bonita Lawrence, 2011</h4>
-    <img src="okayode10.JPG" alt="Forest" style="width:100%">
-  </div>
-  <div class="column">
-    <h4>Bridge day, West Virginia, 2012</h4>
-    <img src="okayode3.jpg" alt="Mountains" style="width:100%">
-  </div>
-</div>
-
-<div class="row">
-  <div class="column">
-    <h4>Playing Trivia, Huntington WV, 2013</h4>
-    <img src="okayode6.jpg" alt="Snow" style="width:100%">
-  </div>
-  <div class="column">
-    <h4>Bukola at Universal Studios, 2016</h4>
-    <img src="okayode4.jpg" alt="Forest" style="width:100%">  
-  </div>
-  <div class="column">
-    <h4>Solis house (Desperate Housewives) Universal Studios, 2017</h4>
-    <img src="Carlos_Gabrielle_Solis.jpg" alt="Mountains" style="width:100%">
-  </div>
-</div>
-
-<div class="row">
-  <div class="column">
-    <h4>Dr. Abdul Khaliq (middle), Dr. R. Garrappa (3rd Right), 2018</h4>
-    <img src="okayode2.jpg" alt="Snow" style="width:100%">
-  </div>
-  <div class="column">
-    <h4>Hooded by Dr. Abdul Khaliq, 2022</h4>
-    <img src="graduation_01.jpg" alt="Forest" style="width:80%">
-  </div>
-  <div class="column">
-    <h4>With President Sidney McPhee, 2022</h4>
-    <img src="graduation_02.jpg" alt="Mountains" style="width:80%">
-  </div>
-</div>
-
-<div class="row">
-  <div class="column">
-    <h4>Rejniak Lab, Winter 2022</h4>
-    <img src="2022_Rejniak_labmeeting.jpg" alt="Snow" style="width:100%">
-  </div>
-  <div class="column">
-    <h4>Moffitt Symposium, 2023</h4>
-    <img src="2023_MoffittSymposium_Kayode2.jpg" alt="Forest" style="width:100%">  
-  </div>
-  <div class="column">
-    <h4>Participating in Mile for Moffitt, 2023</h4>
-    <img src="olumoyin_milesMoffitt2.jpeg" alt="Mountains" style="width:90%">
-  </div>
-</div>
-
-
-<!--
-<div class="row">
-<div class="column">
-<h4>Dr. Abdul Khaliq (middle), Dr. Roberto Garrappa (3rd Right)</h2>
-<img src="http://okayode.github.io/okayode2.jpg" style="width:100%">
-</div>
-<div class="column">
-<h4>Meeting Dr. Bonita Lawrence</h2>
-<img src="http://okayode.github.io/okayode10.JPG" style="width:100%" >
-</div>
-<div class="column">
-<h4>The New River Gorge Bridge</h2>
-<img src="http://okayode.github.io/okayode3.jpg" style="width:100%" >
-</div>
-<div class="column">
-<h4>Playing Trivia</h2>
-<img src="http://okayode.github.io/okayode6.jpg" style="width:100%" >
-</div>
-<div class="column">
-<h4>Universal Studios</h2>
-<img src="http://okayode.github.io/okayode4.jpg" style="width:100%">
-</div>
-</div>
--->
-  
-  
-</div>
 </body>
 </html>
