@@ -1,58 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Kayode Olumoyin Teaching</title>
-  <style>
-    body {
-      background-color: gainsboro;
-      font-family: Arial, sans-serif;
-      margin: 20px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kayode Olumoyin - Teaching</title>
+<style>
+/* Basic body styling */
+body {
+    background-color: gainsboro;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Main content container */
+#vh {
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    max-width: 1000px;
+    background: white;
+    margin: 60px auto;
+    box-sizing: border-box;
+}
+
+/* Navigation links styling */
+.info2 {
+    text-align: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.info2 a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.info2 a:hover {
+    text-decoration: underline;
+}
+
+/* Papers list styling */
+.paper-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.paper-list li {
+    margin: 15px 0;
+}
+
+/* ---- Responsive Section ---- */
+@media (max-width: 600px) {
+    #vh {
+        margin: 20px;
+        padding: 20px;
     }
+
     .info2 a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: black;
+        display: block;
+        margin: 5px 0;
     }
-    .spaced {
-      margin: 0 5px;
-    }
-    .teaching-list {
-      list-style-type: none;
-      padding: 0;
-    }
-    .teaching-list li {
-      margin: 10px 0;
-    }
-    .course-title {
-      font-weight: bold;
-      margin-top: 20px;
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-<div class="wholepage">
+<nav class="info2">
+  <a href="index.html">Home</a>
+  <span class="spaced">&bull;</span>
+  <a href="research.html">Research</a>
+  <span class="spaced">&bull;</span>
+  <a href="teaching.html">Teaching</a>
+  <span class="spaced">&bull;</span>
+  <a href="notes.html">Notes</a>
+  <span class="spaced">&bull;</span>
+  <a href="useful_links.html">Useful Links</a>
+  <span class="spaced">&bull;</span>
+  <a href="personal.html">Personal</a>
+</nav>
 
-  <div class="info2">
-    <a href="index.html">Home</a>
-    <span class="spaced">&bull;</span>
-
-    <a href="research.html">Research</a>
-    <span class="spaced">&bull;</span>
-
-    <a href="teaching.html">Teaching</a>
-    <span class="spaced">&bull;</span>
-
-    <a href="notes.html">Notes</a>
-    <span class="spaced">&bull;</span>
-
-    <a href="useful_links.html">Useful Links</a>
-    <span class="spaced">&bull;</span>
-
-    <a href="personal.html">Personal</a>
-  </div>
+<main id="vh">
 
   <h2>Spring 2022</h2>
   <div class="course-title">MATH 1010</div>
@@ -155,7 +188,7 @@
     <li><a href="Calc1_11_24.pdf" target="_blank">55</a></li>
   </ul>
 
-</div>
+</main>
 
 </body>
 </html>
