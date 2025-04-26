@@ -1,115 +1,149 @@
-<!Doctype HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kayode Olumoyin</title>
 <style>
-/* This is a comment it is not read by any browser
-This is where the css styling goes */
-body{
-      background-color:GAINSBORO;
-     /*color:#000;
-    background-color:#fff;*/
-    }
-      
-    #vh{
+/* Basic body styling */
+body {
+    background-color: gainsboro;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Main content container */
+#vh {
     border-radius: 15px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    width: 1000px;
-    height: 550px;
+    max-width: 1000px;
     background: white;
-    text-align: left;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-      } 
-    #container{
-              /*Styling for any element with the id="container" */
-              width:950px; /* The width is fixed by pixels */
-              height:1000px; /* The height is fixed by pixels*/
-              /*color:#fff;
-              background-color:red;*/
-            }
+    margin: 60px auto;
+    box-sizing: border-box;
+}
+
+/* Navigation links styling */
+.info2 {
+    text-align: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.info2 a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.info2 a:hover {
+    text-decoration: underline;
+}
+
+/* Centered profile image */
+.profile-pic {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Basic table styling */
+table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+.vita {
+    margin-top: 20px;
+}
+
+/* Style the CV link */
+.vita a {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.vita a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Responsive Section ---- */
+@media (max-width: 600px) {
+    #vh {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .info2 a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    table {
+        font-size: 16px;
+    }
+}
 </style>
 </head>
+
 <body>
 
+<nav class="info2">
+  <a href="index.html">Home</a>
+  <span class="spaced">&bull;</span>
+  <a href="research.html">Research</a>
+  <span class="spaced">&bull;</span>
+  <a href="teaching.html">Teaching</a>
+  <span class="spaced">&bull;</span>
+  <a href="notes.html">Notes</a>
+  <span class="spaced">&bull;</span>
+  <a href="useful_links.html">Useful Links</a>
+  <span class="spaced">&bull;</span>
+  <a href="personal.html">Personal</a>
+</nav>
 
-<div class="info2">
-<a href="index.html">Home</a>
-<span class="spaced">&bull;</span>
+<main id="vh">
 
-<a href="research.html">Research</a>
-<span class="spaced">&bull;</span>
+  <h1 style="text-align:center;">Kayode Olumoyin</h1>
 
-<a href="teaching.html">Teaching</a>
-<span class="spaced">&bull;</span>
+  <img src="http://okayode.github.io/Kayode.jpg" alt="Picture of Kayode Olumoyin" width="280" height="330" class="profile-pic">
 
-<a href="notes.html">Notes</a>
-<span class="spaced">&bull;</span>
+  <p style="font-size:18px;">
+    I received my Ph.D. in 
+    <a href="https://www.mtsu.edu/programs/computational-science-phd/" target="_blank">Computational Science</a> 
+    from <a href="https://www.mtsu.edu/" target="_blank">Middle Tennessee State University</a> 
+    under <a href="https://www.mtsu.edu/faculty/abdul-khaliq" target="_blank">Prof Abdul Khaliq</a>.
+    In August 2022, I joined the 
+    <a href="http://www.rejniak.net/RejniakLab/index.html" target="_blank">Rejniak lab</a> in the  
+    <a href="https://moffitt.org/research-science/divisions-and-departments/quantitative-science/integrated-mathematical-oncology/" 
+    target="_blank">Department of Integrated Mathematical Oncology</a> 
+    at Moffitt Cancer Center as an Applied Postdoctoral Fellow. 
+    I am currently working on the "Development of Adoptive T-cell Bladder Cancer Incorporating Patient-Specific Tumor Microenvironment" project. 
+    My codes are on GitHub at <a href="https://github.com/okayode" target="_blank">https://github.com/okayode</a>.
+  </p>
 
-<a href="useful_links.html">useful links</a>
-<span class="spaced">&bull;</span>
+  <table>
+    <tr>
+      <td><strong>Email:</strong></td>
+      <td>kayode.olumoyin&#64;moffitt.&#111;&#114;&#103;</td>
+    </tr>
+  </table>
 
-<a href="personal.html">Personal</a>
-<span class="spaced">&bull;</span>
+  <div class="vita">
+    <a href="Olumoyin_Kayode.pdf" target="_blank">View My CV (PDF)</a>
+  </div>
 
-</div>
-      
-<div id="vh">      
-<p id="content">
-      
+</main>
 
-<h2>Kayode Olumoyin</h2>
-
-<p style="text-align:center;">
-<IMG SRC="http://okayode.github.io/Kayode.jpg" alt="Picture of Kayode Olumoyin" width="280" height="330">
-</p>
-      
-<!--ALIGN="center" style="margin: 0px 25px 0px 25px;"-->
-
-<p style="font-size:18px">
-I received my Ph.D. in <a href="https://www.mtsu.edu/programs/computational-science-phd/" target="_blank"> 
-Computational Science</a> from <a href="https://www.mtsu.edu/" target="_blank">Middle Tennessee State University</a> 
-under <a href="https://www.mtsu.edu/faculty/abdul-khaliq" target="_blank">Prof Abdul Khaliq</a>. In August 2022, I joined the 
-<a href="http://www.rejniak.net/RejniakLab/index.html" target="_blank">Rejniak lab</a> in the  
-<a href="https://moffitt.org/research-science/divisions-and-departments/quantitative-science/integrated-mathematical-oncology/" 
-target="_blank">Department of Integrated Mathematical Oncology</a> at Moffitt Cancer Center as an Applied Postdoctoral Fellow. I am currently working
-on "Development of Adoptive T-cell Bladder Cancer Incorporating Patient-Specific tumor Microenvironment" project. My codes are on Github
-at <a href="https://github.com/okayode" target="_blank">https://github.com/okayode</a>. 
-</p>
-
-<div class="info">
-
-</div>
-
-<table>
-
-<tr>
-<td class="ciname">Email: </td>
-<td class="cidata">
-kayode.olumoyin&#64;moffitt.&#111;&#114;&#103;
-</td>
-</tr>
-
-</table>
-
-<table class="vita">
-<tr valign="top">
-<li>
-<OBJECT data="Olumoyin_Kayode.pdf" TYPE="application/x-pdf" TITLE="CV"
-WIDTH=200 HEIGHT=100>
-    <a href="Olumoyin_Kayode.pdf" target="_blank"><i>CV </i></a>
-</object>
-</li>
-</table>
-
-</p>
-
-</div>
 </body>
 </html>
