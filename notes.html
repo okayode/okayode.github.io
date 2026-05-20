@@ -1,71 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Kayode Olumoyin - Notes</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-/* Basic body styling */
-body {
-    background-color: gainsboro;
-    margin: 0;
-    font-family: Arial, sans-serif;
+
+/* ===== Global ===== */
+
+:root{
+    --bg:#0b1020;
+    --card:#12182b;
+    --accent:#4f8cff;
+    --text:#f5f7fa;
+    --muted:#aab4c5;
+    --border:rgba(255,255,255,0.08);
 }
 
-/* Main content container */
-#vh {
-    border-radius: 15px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    padding: 25px;
-    max-width: 1000px;
-    background: white;
-    margin: 60px auto;
-    box-sizing: border-box;
-}
-  
-/* Navigation links styling */
-.info2 {
-    text-align: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
+*{
+    box-sizing:border-box;
 }
 
-.info2 a {
-    text-decoration: none;
-    color: #333;
-    margin: 0 10px;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 8px;
+html{
+    scroll-behavior:smooth;
 }
 
-.info2 a:hover {
-    text-decoration: underline;
+body{
+
+    margin:0;
+
+    font-family:'Inter', sans-serif;
+
+    background:
+        radial-gradient(circle at top right,
+        #1f3c88 0%,
+        #0b1020 40%,
+        #090d18 100%);
+
+    color:var(--text);
+
+    line-height:1.7;
 }
 
-/* Papers list styling */
-.paper-list {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 20px;
+/* ===== Navigation ===== */
+
+.info2{
+
+    width:100%;
+
+    padding:28px 20px;
+
+    text-align:center;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    backdrop-filter:blur(14px);
+
+    background:rgba(10,15,30,0.55);
+
+    border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-.paper-list li {
-    margin: 15px 0;
+.info2 a{
+
+    text-decoration:none;
+
+    color:var(--muted);
+
+    margin:0 12px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:all 0.25s ease;
 }
 
-/* ---- Responsive Section ---- */
-@media (max-width: 600px) {
-    #vh {
-        margin: 20px;
-        padding: 20px;
+.info2 a:hover{
+    color:var(--text);
+}
+
+.spaced{
+    color:rgba(255,255,255,0.2);
+}
+
+/* ===== Main Container ===== */
+
+#vh{
+
+    max-width:1100px;
+
+    margin:70px auto;
+
+    padding:70px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.06),
+            rgba(255,255,255,0.03)
+        );
+
+    border:1px solid var(--border);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(12px);
+}
+
+/* ===== Page Title ===== */
+
+h1{
+
+    text-align:center;
+
+    font-size:4rem;
+
+    font-weight:700;
+
+    letter-spacing:-2px;
+
+    margin-top:0;
+
+    margin-bottom:60px;
+
+    line-height:1.1;
+}
+
+/* ===== Notes List ===== */
+
+.notes-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap:24px;
+}
+
+/* ===== Note Cards ===== */
+
+.notes-list li{
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.05),
+            rgba(255,255,255,0.025)
+        );
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.18);
+}
+
+.notes-list li:hover{
+
+    transform:translateY(-6px);
+
+    border-color:rgba(79,140,255,0.35);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.28);
+}
+
+/* ===== Links ===== */
+
+.notes-list li a{
+
+    display:block;
+
+    padding:28px;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    transition:all 0.25s ease;
+}
+
+.notes-list li a:hover{
+    color:#9fc0ff;
+}
+
+/* ===== Note Titles ===== */
+
+.notes-list li i{
+
+    font-style:normal;
+
+    font-size:1.08rem;
+
+    font-weight:500;
+
+    line-height:1.6;
+}
+
+/* ===== General Links ===== */
+
+a{
+    color:var(--accent);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width:900px){
+
+    #vh{
+        margin:30px 20px;
+        padding:45px 30px;
     }
 
-    .info2 a {
-        display: block;
-        margin: 5px 0;
+    h1{
+        font-size:2.8rem;
     }
 }
+
+@media (max-width:600px){
+
+    .info2{
+        padding:22px 15px;
+    }
+
+    .info2 a{
+        display:inline-block;
+        margin:8px 8px;
+        font-size:14px;
+    }
+
+    .spaced{
+        display:none;
+    }
+
+    #vh{
+        padding:35px 22px;
+        border-radius:22px;
+    }
+
+    h1{
+        font-size:2.2rem;
+        margin-bottom:40px;
+    }
+
+    .notes-list{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .notes-list li a{
+        padding:22px;
+    }
+}
+
 </style>
 </head>
 
@@ -74,21 +292,28 @@ body {
 <nav class="info2">
   <a href="index.html">Home</a>
   <span class="spaced">&bull;</span>
+
   <a href="research.html">Research</a>
   <span class="spaced">&bull;</span>
+
   <a href="teaching.html">Teaching</a>
   <span class="spaced">&bull;</span>
+
   <a href="notes.html">Notes</a>
   <span class="spaced">&bull;</span>
+
   <a href="useful_links.html">Useful Links</a>
   <span class="spaced">&bull;</span>
+
   <a href="personal.html">Personal</a>
 </nav>
 
 <main id="vh">
 
-  <h1 style="text-align:center;">Some Helpful Notes</h1>
+  <h1>Some Helpful Notes</h1>
+
   <ul class="notes-list">
+
     <li>
       <a href="Tips.pdf" target="_blank">
         <i>Tips for Learning Advanced Mathematics</i>
@@ -111,7 +336,8 @@ body {
       <a href="winifred_sch.pdf" target="_blank">
         <i>Essay for the Winifred O. Stone and Presidential Graduate Fellowship</i>
       </a><br>
-    </li>   
+    </li>
+
   </ul>
 
 </main>
