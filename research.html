@@ -1,71 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Kayode Olumoyin - Research</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-/* Basic body styling */
-body {
-    background-color: gainsboro;
-    margin: 0;
-    font-family: Arial, sans-serif;
+
+/* ===== Global ===== */
+
+:root{
+    --bg:#0b1020;
+    --card:#12182b;
+    --accent:#4f8cff;
+    --text:#f5f7fa;
+    --muted:#aab4c5;
+    --border:rgba(255,255,255,0.08);
 }
 
-/* Main content container */
-#vh {
-    border-radius: 15px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    padding: 25px;
-    max-width: 1000px;
-    background: white;
-    margin: 60px auto;
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-/* Navigation links styling */
-.info2 {
-    text-align: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
+html{
+    scroll-behavior:smooth;
 }
 
-.info2 a {
-    text-decoration: none;
-    color: #333;
-    margin: 0 10px;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 8px;
+body{
+
+    margin:0;
+
+    font-family:'Inter', sans-serif;
+
+    background:
+        radial-gradient(circle at top right,
+        #1f3c88 0%,
+        #0b1020 40%,
+        #090d18 100%);
+
+    color:var(--text);
+
+    line-height:1.7;
 }
 
-.info2 a:hover {
-    text-decoration: underline;
+/* ===== Navigation ===== */
+
+.info2{
+
+    width:100%;
+
+    padding:28px 20px;
+
+    text-align:center;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    backdrop-filter:blur(14px);
+
+    background:rgba(10,15,30,0.55);
+
+    border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-/* Papers list styling */
-.paper-list {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 20px;
+.info2 a{
+
+    text-decoration:none;
+
+    color:var(--muted);
+
+    margin:0 12px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:all 0.25s ease;
 }
 
-.paper-list li {
-    margin: 15px 0;
+.info2 a:hover{
+    color:var(--text);
 }
 
-/* ---- Responsive Section ---- */
-@media (max-width: 600px) {
-    #vh {
-        margin: 20px;
-        padding: 20px;
+.spaced{
+    color:rgba(255,255,255,0.2);
+}
+
+/* ===== Main Container ===== */
+
+#vh{
+
+    max-width:1200px;
+
+    margin:70px auto;
+
+    padding:70px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.06),
+            rgba(255,255,255,0.03)
+        );
+
+    border:1px solid var(--border);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(12px);
+}
+
+/* ===== Main Title ===== */
+
+h1{
+
+    text-align:center;
+
+    font-size:4rem;
+
+    font-weight:700;
+
+    letter-spacing:-2px;
+
+    margin-top:0;
+
+    margin-bottom:70px;
+
+    line-height:1.1;
+}
+
+/* ===== Section Titles ===== */
+
+h2{
+
+    font-size:1.5rem;
+
+    font-weight:600;
+
+    margin-top:70px;
+
+    margin-bottom:30px;
+
+    color:var(--text);
+
+    border-left:4px solid var(--accent);
+
+    padding-left:18px;
+
+    letter-spacing:-0.5px;
+}
+
+/* ===== Papers List ===== */
+
+.paper-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+}
+
+/* ===== Paper Cards ===== */
+
+.paper-list li{
+
+    padding:28px;
+
+    margin-bottom:22px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.05),
+            rgba(255,255,255,0.025)
+        );
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.18);
+}
+
+.paper-list li:hover{
+
+    transform:translateY(-6px);
+
+    border-color:rgba(79,140,255,0.35);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.28);
+}
+
+/* ===== Links ===== */
+
+a{
+
+    color:var(--accent);
+
+    text-decoration:none;
+
+    transition:all 0.25s ease;
+}
+
+a:hover{
+    opacity:0.85;
+}
+
+/* ===== Paper Title ===== */
+
+.paper-list li > a:first-child{
+
+    font-size:1.05rem;
+
+    font-weight:500;
+
+    line-height:1.7;
+
+    display:inline-block;
+
+    margin-bottom:10px;
+}
+
+/* ===== DOI Links ===== */
+
+.paper-list li a:last-child{
+
+    font-size:0.95rem;
+
+    color:#8fb7ff;
+}
+
+/* ===== Italics ===== */
+
+i{
+    color:var(--text);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width:900px){
+
+    #vh{
+        margin:30px 20px;
+        padding:45px 30px;
     }
 
-    .info2 a {
-        display: block;
-        margin: 5px 0;
+    h1{
+        font-size:2.8rem;
     }
 }
+
+@media (max-width:600px){
+
+    .info2{
+        padding:22px 15px;
+    }
+
+    .info2 a{
+        display:inline-block;
+        margin:8px 8px;
+        font-size:14px;
+    }
+
+    .spaced{
+        display:none;
+    }
+
+    #vh{
+        padding:35px 22px;
+        border-radius:22px;
+    }
+
+    h1{
+        font-size:2.2rem;
+        margin-bottom:45px;
+    }
+
+    h2{
+        font-size:1.25rem;
+        margin-top:50px;
+    }
+
+    .paper-list li{
+        padding:22px;
+    }
+}
+
 </style>
 </head>
 
@@ -74,123 +315,176 @@ body {
 <nav class="info2">
   <a href="index.html">Home</a>
   <span class="spaced">&bull;</span>
+
   <a href="research.html">Research</a>
   <span class="spaced">&bull;</span>
+
   <a href="teaching.html">Teaching</a>
   <span class="spaced">&bull;</span>
+
   <a href="notes.html">Notes</a>
   <span class="spaced">&bull;</span>
+
   <a href="useful_links.html">Useful Links</a>
   <span class="spaced">&bull;</span>
+
   <a href="personal.html">Personal</a>
 </nav>
 
 <main id="vh">
 
-  <h1 style="text-align:center;">Research Papers</h1>
+  <h1>Research Papers</h1>
 
-  <h2> Peer-Reviewed Papers and Conference Papers, IMO, Moffitt Cancer Center</h2>
+  <h2>Peer-Reviewed Papers and Conference Papers, IMO, Moffitt Cancer Center</h2>
+
   <ul class="paper-list">
+
     <li>
       <a href="TS4H.pdf" target="_blank">
         <i>Learning Model Parameter Dynamics in a Combination Therapy for Bladder Cancer from Sparse Biological Data</i>, NeurIPS 2025 Workshop on Learning from Time Series for Health
       </a><br>
-      <a href="https://openreview.net/forum?id=8j7PSxDB2X" target="_blank">DOI Link</a>
+
+      <a href="https://openreview.net/forum?id=8j7PSxDB2X" target="_blank">
+        DOI Link
+      </a>
     </li>
 
     <li>
       <a href="race_based_cachexia.pdf" target="_blank">
         <i>Race-based differences in serum biomarkers for cancer-associated cachexia in a diverse cohort of patients with pancreatic ductal adenocarcinoma</i>, Commun Med, 2025
       </a><br>
-      <a href="https://doi.org/10.1038/s43856-025-01277-9" target="_blank">DOI Link</a>
+
+      <a href="https://doi.org/10.1038/s43856-025-01277-9" target="_blank">
+        DOI Link
+      </a>
     </li>
 
     <li>
       <a href="linG3D.pdf" target="_blank">
         <i>LinG3D: Visualizing the spatio-temporal dynamics of clonal evolution</i>, BMC Bioinformatics, 2024, 25(201)
       </a><br>
-      <a href="https://doi.org/10.1186/s12859-024-05813-7" target="_blank">DOI Link</a>
+
+      <a href="https://doi.org/10.1186/s12859-024-05813-7" target="_blank">
+        DOI Link
+      </a>
     </li>
+
   </ul>
 
-  <h2> Preprints and Papers under review, IMO, Moffitt Cancer Center</h2>
+  <h2>Preprints and Papers under review, IMO, Moffitt Cancer Center</h2>
+
   <ul class="paper-list">
+
     <li>
       <a href="MoCaPS_medRxiv.pdf" target="_blank">
         <i>MoCaPS: A Machine Learning Model for Stratification of Cancer-Associated Cachexia Based on Blood Biomarkers</i>, medRxiv 2025.12.23.25342866
       </a><br>
-      <a href="https://doi.org/10.64898/2025.12.23.25342866" target="_blank">DOI Link</a>
+
+      <a href="https://doi.org/10.64898/2025.12.23.25342866" target="_blank">
+        DOI Link
+      </a>
     </li>
-      
+
     <li>
       <a href="PETIL_bioRxiv.pdf" target="_blank">
         <i>PETIL: Predicting Expansion of Tumor Infiltrating Lymphocytes for the Adoptive Cell Immunotherapy in Bladder Cancers</i>, BioRxiv, 2026
       </a><br>
-      <a href="https://doi.org/10.1101/2025.10.15.682695" target="_blank">DOI Link</a>
+
+      <a href="https://doi.org/10.1101/2025.10.15.682695" target="_blank">
+        DOI Link
+      </a>
     </li>
 
     <li>
       <a href="BC_PINN_01.pdf" target="_blank">
         <i>Modeling Adoptive Cell Therapy in Bladder Cancer from Sparse Biological Data using PINNs</i>, arXiv:2510.13431, 2025
       </a><br>
-      <a href="https://doi.org/10.48550/arXiv.2510.13431" target="_blank">DOI Link</a>
+
+      <a href="https://doi.org/10.48550/arXiv.2510.13431" target="_blank">
+        DOI Link
+      </a>
     </li>
 
     <li>
       <a href="cachexia_paper_01.pdf" target="_blank">
         <i>Machine Learning-Based Identification of Blood Biomarkers that Distinguish Precachectic and Cachectic Patients with Pancreatic Ductal Adenocarcinoma</i>, medRxiv 2025.12.23.25342866, 2025
       </a><br>
-      <a href="https://doi.org/10.64898/2025.12.23.25342866" target="_blank">DOI Link</a>
+
+      <a href="https://doi.org/10.64898/2025.12.23.25342866" target="_blank">
+        DOI Link
+      </a>
     </li>
-  </ul>  
+
+  </ul>
 
   <h2>Papers and Preprints during PhD</h2>
+
   <ul class="paper-list">
+
     <li>
       <a href="2205.11483.pdf" target="_blank">
         <i>Learning Differential Equations from Data</i>, arXiv:2205.11483, 2022
       </a><br>
-      <a href="https://doi.org/10.48550/arXiv.2205.11483" target="_blank">DOI Link</a>
+
+      <a href="https://doi.org/10.48550/arXiv.2205.11483" target="_blank">
+        DOI Link
+      </a>
     </li>
 
     <li>
       <a href="2205.06834.pdf" target="_blank">
         <i>Multi-Variant COVID-19 Model with Heterogeneous Transmission Rates Using Deep Neural Networks</i>, arXiv:2205.06834, 2022
       </a><br>
-      <a href="https://doi.org/10.48550/arXiv.2205.06834" target="_blank">DOI Link</a>
+
+      <a href="https://doi.org/10.48550/arXiv.2205.06834" target="_blank">
+        DOI Link
+      </a>
     </li>
 
     <li>
       <a href="epidemiologia_Olumoyin_2021.pdf" target="_blank">
         <i>Data-Driven Deep-Learning Algorithm for Asymptomatic COVID-19 Model with Varying Mitigation Measures and Transmission Rate</i>, Epidemiologia, 2021, 2(4), 471-489
       </a><br>
-      <a href="https://doi.org/10.3390/epidemiologia2040033" target="_blank">DOI Link</a>
+
+      <a href="https://doi.org/10.3390/epidemiologia2040033" target="_blank">
+        DOI Link
+      </a>
     </li>
 
     <li>
       <a href="2104.02603v3.pdf" target="_blank">
         <i>Data-Driven Deep Learning Algorithms for Time-Varying Infection Rates of COVID-19 and Mitigation Measures</i>, arXiv:2104.02603, 2021
       </a><br>
-      <a href="https://doi.org/10.48550/arXiv.2104.02603" target="_blank">DOI Link</a>
+
+      <a href="https://doi.org/10.48550/arXiv.2104.02603" target="_blank">
+        DOI Link
+      </a>
     </li>
-  </ul>  
+
+  </ul>
 
   <h2>Ph.D. Dissertation</h2>
+
   <ul class="paper-list">
+
     <li>
       <a href="Olumoyin_PHD_dissertation_new.pdf" target="_blank">
         <i>Data-Driven Deep Neural Networks for Epidemiological and Biochemical Models</i>, Middle Tennessee State University, May 2022
       </a>
     </li>
+
   </ul>
 
   <h2>Master's Thesis</h2>
+
   <ul class="paper-list">
+
     <li>
       <a href="ma_2013.pdf" target="_blank">
         <i>Solutions of Dynamic Equations on Time Scales with Jumps</i>, Marshall University, May 2013
       </a>
     </li>
+
   </ul>
 
 </main>
