@@ -3,96 +3,297 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Kayode Olumoyin</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-/* Basic body styling */
-body {
-    background-color: gainsboro;
-    margin: 0;
-    font-family: Arial, sans-serif;
+
+/* ===== Global Styling ===== */
+
+:root{
+    --bg:#0b1020;
+    --card:#12182b;
+    --accent:#4f8cff;
+    --text:#f5f7fa;
+    --muted:#aab4c5;
+    --border:rgba(255,255,255,0.08);
 }
 
-/* Main content container */
-#vh {
-    border-radius: 15px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    padding: 25px;
-    max-width: 1000px;
-    background: white;
-    margin: 60px auto;
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-/* Navigation links styling */
-.info2 {
-    text-align: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
+html{
+    scroll-behavior:smooth;
 }
 
-.info2 a {
-    text-decoration: none;
-    color: #333;
-    margin: 0 10px;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 8px;
+body{
+    margin:0;
+    font-family:'Inter', sans-serif;
+    background:
+        radial-gradient(circle at top right,
+        #1f3c88 0%,
+        #0b1020 40%,
+        #090d18 100%);
+    color:var(--text);
+    min-height:100vh;
+    line-height:1.7;
 }
 
-.info2 a:hover {
-    text-decoration: underline;
+/* ===== Navigation ===== */
+
+.info2{
+    width:100%;
+    padding:28px 20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    backdrop-filter:blur(14px);
+    background:rgba(10,15,30,0.55);
+
+    border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-/* Centered profile image */
-.profile-pic {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+.info2 a{
+    text-decoration:none;
+    color:var(--muted);
+    margin:0 12px;
+    font-size:15px;
+    font-weight:500;
+    transition:all 0.25s ease;
+    letter-spacing:0.2px;
 }
 
-/* Basic table styling */
-table {
-    margin-top: 20px;
-    width: 100%;
+.info2 a:hover{
+    color:var(--text);
 }
 
-td {
-    padding: 5px 10px;
-    vertical-align: top;
+.spaced{
+    color:rgba(255,255,255,0.2);
 }
 
-.vita {
-    margin-top: 20px;
+/* ===== Main Container ===== */
+
+#vh{
+
+    max-width:1100px;
+
+    margin:70px auto;
+
+    padding:70px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.06),
+            rgba(255,255,255,0.03)
+        );
+
+    border:1px solid var(--border);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(12px);
 }
 
-/* Style the CV link */
-.vita a {
-    font-weight: bold;
-    color: #0066cc;
+/* ===== Name ===== */
+
+h1{
+    text-align:center;
+    font-size:4rem;
+    font-weight:700;
+    letter-spacing:-2px;
+    margin-top:0;
+    margin-bottom:50px;
+    line-height:1.1;
 }
 
-.vita a:hover {
-    text-decoration: underline;
+/* ===== Profile Image ===== */
+
+.profile-pic{
+
+    display:block;
+
+    margin:0 auto 45px auto;
+
+    width:280px;
+    height:330px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.35);
+
+    transition:transform 0.4s ease;
 }
 
-/* ---- Responsive Section ---- */
-@media (max-width: 600px) {
-    #vh {
-        margin: 20px;
-        padding: 20px;
+.profile-pic:hover{
+    transform:translateY(-6px);
+}
+
+/* ===== Paragraph ===== */
+
+p{
+    font-size:1.08rem;
+    color:var(--muted);
+    max-width:850px;
+    margin:0 auto;
+    text-align:left;
+}
+
+/* ===== Links ===== */
+
+a{
+    color:var(--accent);
+    text-decoration:none;
+    transition:all 0.25s ease;
+}
+
+a:hover{
+    opacity:0.85;
+}
+
+/* ===== Table ===== */
+
+table{
+
+    width:100%;
+    max-width:700px;
+
+    margin:45px auto 0 auto;
+
+    border-collapse:collapse;
+
+    background:rgba(255,255,255,0.03);
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+td{
+    padding:18px 22px;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    color:var(--muted);
+}
+
+tr:last-child td{
+    border-bottom:none;
+}
+
+/* ===== CV Button ===== */
+
+.vita{
+    text-align:center;
+    margin-top:45px;
+}
+
+.vita a{
+
+    display:inline-block;
+
+    padding:14px 28px;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        #4f8cff,
+        #2f6fff
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    letter-spacing:0.3px;
+
+    transition:all 0.3s ease;
+
+    box-shadow:
+        0 10px 25px rgba(79,140,255,0.25);
+}
+
+.vita a:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 18px 35px rgba(79,140,255,0.35);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width:900px){
+
+    #vh{
+        margin:30px 20px;
+        padding:45px 30px;
     }
 
-    .info2 a {
-        display: block;
-        margin: 5px 0;
-    }
-
-    table {
-        font-size: 16px;
+    h1{
+        font-size:2.8rem;
     }
 }
+
+@media (max-width:600px){
+
+    .info2{
+        padding:22px 15px;
+    }
+
+    .info2 a{
+        display:inline-block;
+        margin:8px 8px;
+        font-size:14px;
+    }
+
+    .spaced{
+        display:none;
+    }
+
+    #vh{
+        padding:35px 22px;
+        border-radius:22px;
+    }
+
+    h1{
+        font-size:2.2rem;
+        margin-bottom:35px;
+    }
+
+    .profile-pic{
+        width:220px;
+        height:260px;
+    }
+
+    p{
+        font-size:1rem;
+        text-align:left;
+    }
+
+    td{
+        display:block;
+        width:100%;
+    }
+}
+
 </style>
 </head>
 
@@ -101,35 +302,47 @@ td {
 <nav class="info2">
   <a href="index.html">Home</a>
   <span class="spaced">&bull;</span>
+
   <a href="research.html">Research</a>
   <span class="spaced">&bull;</span>
+
   <a href="teaching.html">Teaching</a>
   <span class="spaced">&bull;</span>
+
   <a href="notes.html">Notes</a>
   <span class="spaced">&bull;</span>
+
   <a href="useful_links.html">Useful Links</a>
   <span class="spaced">&bull;</span>
+
   <a href="personal.html">Personal</a>
 </nav>
 
 <main id="vh">
 
-  <h1 style="text-align:center;">Kayode Olumoyin</h1>
+  <h1>Kayode Olumoyin</h1>
 
-  <img src="http://okayode.github.io/Kayode.jpg" alt="Picture of Kayode Olumoyin" width="280" height="330" class="profile-pic">
+  <img
+    src="http://okayode.github.io/Kayode.jpg"
+    alt="Picture of Kayode Olumoyin"
+    width="280"
+    height="330"
+    class="profile-pic"
+  >
 
-  <p style="font-size:18px;">
-    I received my Ph.D. in 
-    <a href="https://www.mtsu.edu/programs/computational-science-phd/" target="_blank">Computational Science</a> 
-    from <a href="https://www.mtsu.edu/" target="_blank">Middle Tennessee State University</a> 
+  <p>
+    I received my Ph.D. in
+    <a href="https://www.mtsu.edu/programs/computational-science-phd/" target="_blank">Computational Science</a>
+    from <a href="https://www.mtsu.edu/" target="_blank">Middle Tennessee State University</a>
     under <a href="https://www.mtsu.edu/faculty/abdul-khaliq" target="_blank">Prof Abdul Khaliq</a>.
-    In August 2022, I joined the 
-    <a href="http://www.rejniak.net/RejniakLab/index.html" target="_blank">Rejniak lab</a> in the  
-    <a href="https://moffitt.org/research-science/divisions-and-departments/quantitative-science/integrated-mathematical-oncology/" 
-    target="_blank">Department of Integrated Mathematical Oncology</a> 
-    at Moffitt Cancer Center as an Applied Postdoctoral Fellow. 
-    I am currently working on the "Development of Adoptive T-cell Bladder Cancer Incorporating Patient-Specific Tumor Microenvironment" project. 
-    My codes are on GitHub at <a href="https://github.com/okayode" target="_blank">https://github.com/okayode</a>.
+    In August 2022, I joined the
+    <a href="http://www.rejniak.net/RejniakLab/index.html" target="_blank">Rejniak lab</a> in the
+    <a href="https://moffitt.org/research-science/divisions-and-departments/quantitative-science/integrated-mathematical-oncology/"
+    target="_blank">Department of Integrated Mathematical Oncology</a>
+    at Moffitt Cancer Center as an Applied Postdoctoral Fellow.
+    I am currently working on the "Development of Adoptive T-cell Bladder Cancer Incorporating Patient-Specific Tumor Microenvironment" project.
+    My codes are on GitHub at
+    <a href="https://github.com/okayode" target="_blank">https://github.com/okayode</a>.
   </p>
 
   <table>
@@ -140,7 +353,9 @@ td {
   </table>
 
   <div class="vita">
-    <a href="Olumoyin_kayode_CV_May_26.pdf" target="_blank">View My CV (PDF)</a>
+    <a href="Olumoyin_kayode_CV_May_26.pdf" target="_blank">
+      View My CV (PDF)
+    </a>
   </div>
 
 </main>
