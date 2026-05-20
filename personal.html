@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,10 +13,6 @@
 
 <style>
 
-*{
-  box-sizing:border-box;
-}
-
 /* ===== Global ===== */
 
 :root{
@@ -29,82 +24,51 @@
     --border:rgba(255,255,255,0.08);
 }
 
+*{
+    box-sizing:border-box;
+}
+
 html{
   scroll-behavior:smooth;
 }
 
 body{
-
-  margin:0;
-
-  font-family:'Inter', sans-serif;
-
-  background:
-      radial-gradient(circle at top right,
-      #1f3c88 0%,
-      #0b1020 40%,
-      #090d18 100%);
-
-  color:var(--text);
-
-  line-height:1.7;
-}
-
-/* ===== Main Container ===== */
-
-.wholepage{
-
-  max-width:1300px;
-
-  margin:70px auto;
-
-  padding:70px;
-
-  border-radius:28px;
-
-  background:
-      linear-gradient(
-          180deg,
-          rgba(255,255,255,0.06),
-          rgba(255,255,255,0.03)
-      );
-
-  border:1px solid var(--border);
-
-  box-shadow:
-      0 20px 60px rgba(0,0,0,0.35);
-
-  backdrop-filter:blur(12px);
+    margin:0;
+    font-family:'Inter', sans-serif;
+    background:
+        radial-gradient(circle at top right,
+        #1f3c88 0%,
+        #0b1020 40%,
+        #090d18 100%);
+    color:var(--text);
+    min-height:100vh;
+    line-height:1.7;
 }
 
 /* ===== Navigation ===== */
 
 .info2{
+    width:100%;
+    padding:28px 20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
 
-  width:100%;
+    backdrop-filter:blur(14px);
+    background:rgba(10,15,30,0.55);
 
-  padding-bottom:35px;
-
-  text-align:center;
-
-  border-bottom:1px solid rgba(255,255,255,0.06);
-
-  margin-bottom:55px;
+    border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .info2 a{
-
-  text-decoration:none;
-
-  color:var(--muted);
-
-  margin:0 12px;
-
-  font-size:15px;
-
-  font-weight:500;
-
-  transition:all 0.25s ease;
+    text-decoration:none;
+    color:var(--muted);
+    margin:0 12px;
+    font-size:15px;
+    font-weight:500;
+    transition:all 0.25s ease;
+    letter-spacing:0.2px;
 }
 
 .info2 a:hover{
@@ -115,23 +79,43 @@ body{
   color:rgba(255,255,255,0.2);
 }
 
+/* ===== Main Container ===== */
+
+#vh{
+
+    max-width:1200px;
+
+    margin:70px auto;
+
+    padding:70px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.06),
+            rgba(255,255,255,0.03)
+        );
+
+    border:1px solid var(--border);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(12px);
+}
+
 /* ===== Page Title ===== */
 
 h1{
-
-  text-align:center;
-
-  font-size:4rem;
-
-  font-weight:700;
-
-  letter-spacing:-2px;
-
-  margin-top:0;
-
-  margin-bottom:60px;
-
-  line-height:1.1;
+    text-align:center;
+    font-size:4rem;
+    font-weight:700;
+    letter-spacing:-2px;
+    margin-top:0;
+    margin-bottom:50px;
+    line-height:1.1;
 }
 
 /* ===== Gallery Rows ===== */
