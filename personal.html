@@ -1,98 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kayode Olumoyin Personal</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: gainsboro;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .wholepage {
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    }
+<title>Kayode Olumoyin Personal</title>
 
-    /* Navigation styling */
-    .info2 {
-      text-align: center;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    .info2 a {
-      text-decoration: none;
-      color: #333;
-      margin: 0 10px;
-      font-weight: bold;
-      display: inline-block;
-      margin-bottom: 8px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    .info2 a:hover {
-      text-decoration: underline;
-    }
+<style>
 
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+*{
+  box-sizing:border-box;
+}
 
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
+/* ===== Global ===== */
 
-    .column {
-      flex: 1 1 30%;
-      padding: 10px;
-      text-align: center;
-    }
+:root{
+    --bg:#0b1020;
+    --card:#12182b;
+    --accent:#4f8cff;
+    --text:#f5f7fa;
+    --muted:#aab4c5;
+    --border:rgba(255,255,255,0.08);
+}
 
-    .column img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    .column h4 {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #555;
-    }
+body{
 
-    /* Responsive section */
-    @media (max-width: 768px) {
-      .column {
-        flex: 1 1 45%;
-      }
-    }
+  margin:0;
 
-    @media (max-width: 500px) {
-      .column {
-        flex: 1 1 100%;
-      }
+  font-family:'Inter', sans-serif;
 
-      .info2 a {
-        display: block;
-        margin: 5px 0;
-      }
-    }
-  </style>
+  background:
+      radial-gradient(circle at top right,
+      #1f3c88 0%,
+      #0b1020 40%,
+      #090d18 100%);
+
+  color:var(--text);
+
+  line-height:1.7;
+}
+
+/* ===== Main Container ===== */
+
+.wholepage{
+
+  max-width:1300px;
+
+  margin:70px auto;
+
+  padding:70px;
+
+  border-radius:28px;
+
+  background:
+      linear-gradient(
+          180deg,
+          rgba(255,255,255,0.06),
+          rgba(255,255,255,0.03)
+      );
+
+  border:1px solid var(--border);
+
+  box-shadow:
+      0 20px 60px rgba(0,0,0,0.35);
+
+  backdrop-filter:blur(12px);
+}
+
+/* ===== Navigation ===== */
+
+.info2{
+
+  width:100%;
+
+  padding-bottom:35px;
+
+  text-align:center;
+
+  border-bottom:1px solid rgba(255,255,255,0.06);
+
+  margin-bottom:55px;
+}
+
+.info2 a{
+
+  text-decoration:none;
+
+  color:var(--muted);
+
+  margin:0 12px;
+
+  font-size:15px;
+
+  font-weight:500;
+
+  transition:all 0.25s ease;
+}
+
+.info2 a:hover{
+  color:var(--text);
+}
+
+.spaced{
+  color:rgba(255,255,255,0.2);
+}
+
+/* ===== Page Title ===== */
+
+h1{
+
+  text-align:center;
+
+  font-size:4rem;
+
+  font-weight:700;
+
+  letter-spacing:-2px;
+
+  margin-top:0;
+
+  margin-bottom:60px;
+
+  line-height:1.1;
+}
+
+/* ===== Gallery Rows ===== */
+
+.row{
+
+  display:grid;
+
+  grid-template-columns:
+      repeat(auto-fit, minmax(300px, 1fr));
+
+  gap:28px;
+
+  margin-bottom:35px;
+}
+
+/* ===== Gallery Cards ===== */
+
+.column{
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  background:
+      linear-gradient(
+          180deg,
+          rgba(255,255,255,0.05),
+          rgba(255,255,255,0.025)
+      );
+
+  border:1px solid rgba(255,255,255,0.05);
+
+  transition:
+      transform 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+
+  box-shadow:
+      0 10px 25px rgba(0,0,0,0.18);
+}
+
+.column:hover{
+
+  transform:translateY(-6px);
+
+  border-color:rgba(79,140,255,0.35);
+
+  box-shadow:
+      0 18px 40px rgba(0,0,0,0.28);
+}
+
+/* ===== Captions ===== */
+
+.column h4{
+
+  margin:0;
+
+  padding:22px 22px 10px 22px;
+
+  font-size:1rem;
+
+  font-weight:500;
+
+  color:var(--muted);
+
+  line-height:1.6;
+}
+
+/* ===== Images ===== */
+
+.column img{
+
+  width:100%;
+
+  display:block;
+
+  height:auto;
+
+  object-fit:cover;
+
+  transition:transform 0.45s ease;
+}
+
+.column:hover img{
+  transform:scale(1.03);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width:900px){
+
+  .wholepage{
+      margin:30px 20px;
+      padding:45px 30px;
+  }
+
+  h1{
+      font-size:2.8rem;
+  }
+}
+
+@media (max-width:600px){
+
+  .wholepage{
+      padding:35px 22px;
+      border-radius:22px;
+  }
+
+  .info2 a{
+      display:inline-block;
+      margin:8px 8px;
+      font-size:14px;
+  }
+
+  .spaced{
+      display:none;
+  }
+
+  h1{
+      font-size:2.2rem;
+      margin-bottom:40px;
+  }
+
+  .row{
+      grid-template-columns:1fr;
+      gap:22px;
+  }
+
+  .column h4{
+      padding:18px 18px 10px 18px;
+      font-size:0.95rem;
+  }
+}
+
+</style>
 </head>
 
 <body>
@@ -102,14 +277,19 @@
   <nav class="info2">
     <a href="index.html">Home</a>
     <span class="spaced">&bull;</span>
+
     <a href="research.html">Research</a>
     <span class="spaced">&bull;</span>
+
     <a href="teaching.html">Teaching</a>
     <span class="spaced">&bull;</span>
+
     <a href="notes.html">Notes</a>
     <span class="spaced">&bull;</span>
+
     <a href="useful_links.html">Useful Links</a>
     <span class="spaced">&bull;</span>
+
     <a href="personal.html">Personal</a>
     <span class="spaced">&bull;</span>
   </nav>
@@ -117,62 +297,78 @@
   <h1>Kayode Olumoyin</h1>
 
   <div class="row">
+
     <div class="column">
       <img src="okayode9.JPG" alt="Snow">
     </div>
+
     <div class="column">
       <h4>Meeting Dr. Bonita Lawrence, 2011</h4>
       <img src="okayode10.JPG" alt="Forest">
     </div>
+
     <div class="column">
       <h4>Bridge Day, West Virginia, 2012</h4>
       <img src="okayode3.jpg" alt="Mountains">
     </div>
+
   </div>
 
   <div class="row">
+
     <div class="column">
       <h4>Playing Trivia, Huntington WV, 2013</h4>
       <img src="okayode6.jpg" alt="Snow">
     </div>
+
     <div class="column">
       <h4>Bukola at Universal Studios, 2016</h4>
       <img src="okayode4.jpg" alt="Forest">
     </div>
+
     <div class="column">
       <h4>Solis House (Desperate Housewives) Universal Studios, 2017</h4>
       <img src="Carlos_Gabrielle_Solis.jpg" alt="Mountains">
     </div>
+
   </div>
 
   <div class="row">
+
     <div class="column">
       <h4>Dr. Abdul Khaliq (middle), Dr. R. Garrappa (3rd Right), 2018</h4>
       <img src="okayode2.jpg" alt="Snow">
     </div>
+
     <div class="column">
       <h4>Hooded by Dr. Abdul Khaliq, 2022</h4>
       <img src="graduation_01.jpg" alt="Forest">
     </div>
+
     <div class="column">
       <h4>With President Sidney McPhee, 2022</h4>
       <img src="graduation_02.jpg" alt="Mountains">
     </div>
+
   </div>
 
   <div class="row">
+
     <div class="column">
       <h4>Rejniak Lab, Winter 2022</h4>
       <img src="2022_Rejniak_labmeeting.jpg" alt="Snow">
     </div>
+
     <div class="column">
       <h4>Moffitt Symposium, 2023</h4>
       <img src="2023_MoffittSymposium_Kayode2.jpg" alt="Forest">
     </div>
+
     <div class="column">
       <h4>Participating in Miles for Moffitt, 2023</h4>
       <img src="olumoyin_milesMoffitt2.jpeg" alt="Mountains">
     </div>
+
   </div>
 
 </div>
