@@ -13,52 +13,48 @@
 
 <style>
 
-/* ===== Global ===== */
+/* =========================
+   MODERN ACADEMIC (JEKYLL STYLE)
+   Inspired by Academic Pages / al-folio
+========================= */
 
 :root{
-    --bg:#0b1020;
-    --card:#12182b;
-    --accent:#4f8cff;
-    --text:#f5f7fa;
-    --muted:#aab4c5;
-    --border:rgba(255,255,255,0.08);
+    --primary:#2c5282;
+    --text:#1a202c;
+    --muted:#4a5568;
+    --bg:#f7fafc;
+    --card:#ffffff;
+    --border:#e2e8f0;
 }
+
+/* ===== GLOBAL ===== */
 
 *{
     box-sizing:border-box;
 }
 
-html{
-  scroll-behavior:smooth;
-}
-
 body{
     margin:0;
     font-family:'Inter', sans-serif;
-    background:
-        radial-gradient(circle at top right,
-        #1f3c88 0%,
-        #0b1020 40%,
-        #090d18 100%);
+    background:var(--bg);
     color:var(--text);
-    min-height:100vh;
     line-height:1.7;
 }
 
-/* ===== Navigation ===== */
+/* ===== NAVIGATION (academic clean bar) ===== */
 
 .info2{
     width:100%;
-    padding:28px 20px;
+    padding:18px 20px;
     text-align:center;
     position:sticky;
     top:0;
     z-index:1000;
 
-    backdrop-filter:blur(14px);
-    background:rgba(10,15,30,0.55);
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
 
-    border-bottom:1px solid rgba(255,255,255,0.05);
+    border-bottom:1px solid var(--border);
 }
 
 .info2 a{
@@ -67,188 +63,128 @@ body{
     margin:0 12px;
     font-size:15px;
     font-weight:500;
-    transition:all 0.25s ease;
-    letter-spacing:0.2px;
 }
 
 .info2 a:hover{
-  color:var(--text);
+    color:var(--primary);
 }
 
 .spaced{
-  color:rgba(255,255,255,0.2);
+    color:#cbd5e0;
 }
 
-/* ===== Main Container ===== */
+/* ===== MAIN PAGE WRAPPER ===== */
 
 #vh{
-
-    max-width:1200px;
-
-    margin:70px auto;
-
-    padding:70px;
-
-    border-radius:28px;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,0.06),
-            rgba(255,255,255,0.03)
-        );
-
+    max-width:1150px;
+    margin:40px auto;
+    padding:50px 40px;
+    background:var(--card);
     border:1px solid var(--border);
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,0.35);
-
-    backdrop-filter:blur(12px);
+    border-radius:14px;
 }
 
-/* ===== Page Title ===== */
+/* ===== PAGE TITLE ===== */
 
 h1{
     text-align:center;
-    font-size:4rem;
+    font-size:3rem;
     font-weight:700;
-    letter-spacing:-2px;
-    margin-top:0;
-    margin-bottom:50px;
-    line-height:1.1;
+    margin-bottom:40px;
+    letter-spacing:-1px;
+    font-family:Georgia, serif;
 }
 
-/* ===== Gallery Rows ===== */
+/* ===== GALLERY GRID ===== */
 
 .row{
-
-  display:grid;
-
-  grid-template-columns:
-      repeat(auto-fit, minmax(300px, 1fr));
-
-  gap:28px;
-
-  margin-bottom:35px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:22px;
+    margin-bottom:28px;
 }
 
-/* ===== Gallery Cards ===== */
+/* ===== CARD STYLE ===== */
 
 .column{
+    background:#ffffff;
+    border:1px solid var(--border);
+    border-radius:12px;
+    overflow:hidden;
 
-  border-radius:24px;
-
-  overflow:hidden;
-
-  background:
-      linear-gradient(
-          180deg,
-          rgba(255,255,255,0.05),
-          rgba(255,255,255,0.025)
-      );
-
-  border:1px solid rgba(255,255,255,0.05);
-
-  transition:
-      transform 0.3s ease,
-      border-color 0.3s ease,
-      box-shadow 0.3s ease;
-
-  box-shadow:
-      0 10px 25px rgba(0,0,0,0.18);
+    box-shadow:0 4px 14px rgba(0,0,0,0.04);
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .column:hover{
-
-  transform:translateY(-6px);
-
-  border-color:rgba(79,140,255,0.35);
-
-  box-shadow:
-      0 18px 40px rgba(0,0,0,0.28);
+    transform:translateY(-4px);
+    box-shadow:0 10px 24px rgba(0,0,0,0.08);
 }
 
-/* ===== Captions ===== */
+/* ===== CAPTION ===== */
 
 .column h4{
-
-  margin:0;
-
-  padding:22px 22px 10px 22px;
-
-  font-size:1rem;
-
-  font-weight:500;
-
-  color:var(--muted);
-
-  line-height:1.6;
+    margin:0;
+    padding:14px 16px 8px 16px;
+    font-size:0.95rem;
+    font-weight:500;
+    color:var(--muted);
+    line-height:1.5;
 }
 
-/* ===== Images ===== */
+/* ===== IMAGE ===== */
 
 .column img{
-
-  width:100%;
-
-  display:block;
-
-  height:auto;
-
-  object-fit:cover;
-
-  transition:transform 0.45s ease;
+    width:100%;
+    display:block;
+    height:auto;
+    object-fit:cover;
 }
 
+/* subtle zoom on hover */
 .column:hover img{
-  transform:scale(1.03);
+    transform:scale(1.02);
+    transition:transform 0.4s ease;
 }
 
-/* ===== Responsive ===== */
+/* ===== RESPONSIVE ===== */
 
 @media (max-width:900px){
 
-  .wholepage{
-      margin:30px 20px;
-      padding:45px 30px;
-  }
+    #vh{
+        margin:20px;
+        padding:30px 20px;
+    }
 
-  h1{
-      font-size:2.8rem;
-  }
+    h1{
+        font-size:2.3rem;
+    }
 }
 
 @media (max-width:600px){
 
-  .wholepage{
-      padding:35px 22px;
-      border-radius:22px;
-  }
+    .info2 a{
+        display:inline-block;
+        margin:6px 8px;
+        font-size:14px;
+    }
 
-  .info2 a{
-      display:inline-block;
-      margin:8px 8px;
-      font-size:14px;
-  }
+    .spaced{
+        display:none;
+    }
 
-  .spaced{
-      display:none;
-  }
+    h1{
+        font-size:2rem;
+    }
 
-  h1{
-      font-size:2.2rem;
-      margin-bottom:40px;
-  }
+    .row{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
 
-  .row{
-      grid-template-columns:1fr;
-      gap:22px;
-  }
-
-  .column h4{
-      padding:18px 18px 10px 18px;
-      font-size:0.95rem;
-  }
+    .column h4{
+        font-size:0.9rem;
+    }
 }
 
 </style>
@@ -256,8 +192,7 @@ h1{
 
 <body>
 
-<div class="wholepage">
-
+<!-- ================= NAVIGATION ================= -->
 <nav class="info2">
     <a href="index.html">Home</a>
     <span class="spaced">&bull;</span>
@@ -277,8 +212,12 @@ h1{
     <a href="personal.html">Personal</a>
 </nav>
 
+<!-- ================= MAIN ================= -->
 <main id="vh">
 
+  <h1>Personal</h1>
+
+  <!-- ROW 1 -->
   <div class="row">
 
     <div class="column">
@@ -297,6 +236,7 @@ h1{
 
   </div>
 
+  <!-- ROW 2 -->
   <div class="row">
 
     <div class="column">
@@ -316,6 +256,7 @@ h1{
 
   </div>
 
+  <!-- ROW 3 -->
   <div class="row">
 
     <div class="column">
@@ -335,6 +276,7 @@ h1{
 
   </div>
 
+  <!-- ROW 4 -->
   <div class="row">
 
     <div class="column">
@@ -354,7 +296,7 @@ h1{
 
   </div>
 
-</div>
+</main>
 
 </body>
 </html>
