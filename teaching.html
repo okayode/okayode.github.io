@@ -14,15 +14,18 @@
 
 <style>
 
-/* ===== Global ===== */
+/* =========================
+   MODERN ACADEMIC JEKYLL STYLE
+   (clean / al-folio inspired)
+========================= */
 
 :root{
-    --bg:#0b1020;
-    --card:#12182b;
-    --accent:#4f8cff;
-    --text:#f5f7fa;
-    --muted:#aab4c5;
-    --border:rgba(255,255,255,0.08);
+    --primary:#2c5282;
+    --bg:#f7fafc;
+    --card:#ffffff;
+    --text:#1a202c;
+    --muted:#4a5568;
+    --border:#e2e8f0;
 }
 
 *{
@@ -34,235 +37,165 @@ html{
 }
 
 body{
-
     margin:0;
-
     font-family:'Inter', sans-serif;
-
-    background:
-        radial-gradient(circle at top right,
-        #1f3c88 0%,
-        #0b1020 40%,
-        #090d18 100%);
-
+    background:var(--bg);
     color:var(--text);
-
-    line-height:1.7;
+    line-height:1.75;
 }
 
-/* ===== Navigation ===== */
+/* =========================
+   NAVIGATION (Academic top bar)
+========================= */
 
 .info2{
-
     width:100%;
-
-    padding:28px 20px;
-
+    padding:18px 20px;
     text-align:center;
-
     position:sticky;
-
     top:0;
-
     z-index:1000;
 
-    backdrop-filter:blur(14px);
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
 
-    background:rgba(10,15,30,0.55);
-
-    border-bottom:1px solid rgba(255,255,255,0.05);
+    border-bottom:1px solid var(--border);
 }
 
 .info2 a{
-
     text-decoration:none;
-
     color:var(--muted);
-
     margin:0 12px;
-
     font-size:15px;
-
     font-weight:500;
-
-    transition:all 0.25s ease;
 }
 
 .info2 a:hover{
-    color:var(--text);
+    color:var(--primary);
 }
 
 .spaced{
-    color:rgba(255,255,255,0.2);
+    color:#cbd5e0;
 }
 
-/* ===== Main Container ===== */
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 #vh{
-
-    max-width:1200px;
-
-    margin:70px auto;
-
-    padding:70px;
-
-    border-radius:28px;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,0.06),
-            rgba(255,255,255,0.03)
-        );
-
+    max-width:1000px;
+    margin:40px auto;
+    padding:50px 40px;
+    background:var(--card);
     border:1px solid var(--border);
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,0.35);
-
-    backdrop-filter:blur(12px);
+    border-radius:14px;
 }
 
-/* ===== Semester Headers ===== */
+/* =========================
+   SECTION HEADERS (semester)
+========================= */
 
 h2{
-
     font-size:2rem;
-
     font-weight:700;
-
-    margin-top:0;
-
-    margin-bottom:16px;
-
-    color:var(--text);
-
-    letter-spacing:-1px;
+    margin:40px 0 15px 0;
+    letter-spacing:-0.5px;
+    font-family:Georgia, serif;
 }
 
-/* ===== Course Title ===== */
+/* =========================
+   COURSE TAG
+========================= */
 
 .course-title{
-
     display:inline-block;
+    margin-bottom:25px;
+    padding:8px 14px;
+    border-radius:20px;
 
-    margin-bottom:30px;
+    background:#edf2f7;
+    border:1px solid var(--border);
 
-    padding:10px 18px;
-
-    border-radius:12px;
-
-    background:rgba(79,140,255,0.12);
-
-    border:1px solid rgba(79,140,255,0.25);
-
-    color:#9fc0ff;
-
+    color:var(--primary);
     font-weight:600;
-
-    letter-spacing:0.3px;
+    font-size:0.95rem;
 }
 
-/* ===== Teaching List ===== */
+/* =========================
+   TEACHING GRID
+========================= */
 
 .teaching-list{
-
     list-style:none;
-
     padding:0;
-
-    margin:0 0 80px 0;
+    margin:0 0 50px 0;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
-
-    gap:16px;
+    grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+    gap:12px;
 }
 
-/* ===== Teaching Cards ===== */
+/* =========================
+   TEACHING CARDS
+========================= */
 
 .teaching-list li{
+    background:#ffffff;
+    border:1px solid var(--border);
+    border-radius:10px;
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,0.05),
-            rgba(255,255,255,0.025)
-        );
-
-    border:1px solid rgba(255,255,255,0.05);
-
-    border-radius:18px;
-
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
+    transition:all 0.2s ease;
 
     overflow:hidden;
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,0.18);
 }
 
 .teaching-list li:hover{
-
-    transform:translateY(-5px);
-
-    border-color:rgba(79,140,255,0.35);
-
-    box-shadow:
-        0 18px 35px rgba(0,0,0,0.28);
+    transform:translateY(-2px);
+    border-color:var(--primary);
 }
 
-/* ===== Links ===== */
+/* =========================
+   LINKS INSIDE CARDS
+========================= */
 
 .teaching-list li a{
-
     display:block;
-
-    padding:18px 22px;
-
-    color:var(--text);
+    padding:14px 16px;
 
     text-decoration:none;
-
+    color:var(--text);
     font-weight:500;
-
-    transition:all 0.25s ease;
 }
 
 .teaching-list li a:hover{
-    color:#9fc0ff;
+    color:var(--primary);
 }
 
-/* ===== General Links ===== */
+/* =========================
+   GENERAL LINKS
+========================= */
 
 a{
-    color:var(--accent);
+    color:var(--primary);
 }
 
-/* ===== Responsive ===== */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width:900px){
 
     #vh{
-        margin:30px 20px;
-        padding:45px 30px;
+        margin:20px;
+        padding:30px 20px;
     }
 
     h2{
-        font-size:1.7rem;
+        font-size:1.6rem;
     }
 }
 
 @media (max-width:600px){
-
-    .info2{
-        padding:22px 15px;
-    }
 
     .info2 a{
         display:inline-block;
@@ -274,22 +207,12 @@ a{
         display:none;
     }
 
-    #vh{
-        padding:35px 22px;
-        border-radius:22px;
+    .teaching-list{
+        grid-template-columns:1fr;
     }
 
     h2{
-        font-size:1.45rem;
-    }
-
-    .teaching-list{
-        grid-template-columns:1fr;
-        gap:14px;
-    }
-
-    .teaching-list li a{
-        padding:16px 18px;
+        font-size:1.4rem;
     }
 }
 
@@ -298,6 +221,7 @@ a{
 
 <body>
 
+<!-- ================= NAV ================= -->
 <nav class="info2">
   <a href="index.html">Home</a>
   <span class="spaced">&bull;</span>
@@ -317,13 +241,13 @@ a{
   <a href="personal.html">Personal</a>
 </nav>
 
+<!-- ================= MAIN ================= -->
 <main id="vh">
 
+  <!-- ================= SPRING 2022 ================= -->
   <h2>Spring 2022</h2>
 
-  <div class="course-title">
-    MATH 1010
-  </div>
+  <div class="course-title">MATH 1010</div>
 
   <ul class="teaching-list">
 
@@ -348,35 +272,37 @@ a{
     <li><a href="Tues_04_19.pdf" target="_blank">20</a></li>
     <li><a href="Thurs_04_21.pdf" target="_blank">21</a></li>
     <li><a href="Tues_04_26.pdf" target="_blank">22</a></li>
+
     <li><a href="Exam_1_studyGuide.pdf" target="_blank">Exam 1 Study Guide</a></li>
     <li><a href="Math_1010_S22_EX1_soln.pdf" target="_blank">Exam 1 Solution</a></li>
+
     <li><a href="Exam_2_studyGuide.pdf" target="_blank">Exam 2 Study Guide</a></li>
     <li><a href="Math_1010_S22_EX2_soln.pdf" target="_blank">Exam 2 Solution</a></li>
+
     <li><a href="MATH1010_FinalExam_studyguide.pdf" target="_blank">Final Exam Study Guide</a></li>
     <li><a href="MATH1010_FinalExam_studyguide_answers.pdf" target="_blank">Final Exam Study Guide Answers</a></li>
-    <li><a href="https://colab.research.google.com/drive/1Mn60ZpTZUS5OkuVA8a5sYVhZL_TAbE01?usp=sharing" target="_blank">Estimating π Using Monte Carlo</a></li>
+
+    <li><a href="https://colab.research.google.com/drive/1Mn60ZpTZUS5OkuVA8a5sYVhZL_TAbE01?usp=sharing" target="_blank">
+      Estimating π Using Monte Carlo
+    </a></li>
 
   </ul>
 
+  <!-- ================= FALL 2021 ================= -->
   <h2>Fall 2021</h2>
 
-  <div class="course-title">
-    Pre-Calculus - MATH 1730
-  </div>
+  <div class="course-title">Pre-Calculus - MATH 1730</div>
 
   <ul class="teaching-list">
-
     <li><a href="Wed_09_01.pdf" target="_blank">01</a></li>
     <li><a href="Wed_09_08.pdf" target="_blank">02</a></li>
     <li><a href="Mon_09_13.pdf" target="_blank">03</a></li>
-
   </ul>
 
+  <!-- ================= FALL 2020 ================= -->
   <h2>Fall 2020</h2>
 
-  <div class="course-title">
-    Calculus 1 - MATH 1910
-  </div>
+  <div class="course-title">Calculus 1 - MATH 1910</div>
 
   <ul class="teaching-list">
 
